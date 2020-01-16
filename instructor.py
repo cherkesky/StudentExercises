@@ -17,6 +17,6 @@ class Instructor:
     self.slack = slack
     self.specialty  = specialty
 
-  def assign_to_cohort(exercise_id, student_id):
-    self.student_id.exercises.append(exercise_id)
+  def assign_exercise_to_student(self, student_obj, exercise_obj):
+    student_obj.exercises.append(exercise_obj)
 

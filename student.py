@@ -15,4 +15,4 @@ class Student:
     self.last = last
     self.slack = slack
     self.cohort  = cohort
-    exercises = list()
+    self.exercises = list()

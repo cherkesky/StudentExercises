@@ -8,7 +8,9 @@
 class Cohort:
   def __init__ (self, name):
     self.name = name
-    students = list()
-    instructors = list()
+    self.students = list()
+    self.instructors = list()
     
+  def add_instructor(self, instructor):
+    self.instructors.append(instructor)
 

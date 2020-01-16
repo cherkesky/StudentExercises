@@ -15,9 +15,21 @@
 # Create 3, or more, instructors and assign them to one of the cohorts.
 # Have each instructor assign 2 exercises to each of the students.
 
+from student import Student
+from cohort import Cohort
+from instructor import Instructor
+from exercise import Exercise
 
-import student
-import cohort
-import instructor
+ex1 = Exercise("ChickenMonkey", "JS")
+ex2 = Exercise("ChickenMonkey", "Python")
+ex3 = Exercise("ChickenMonkey", "React")
+ex4 = Exercise("ChickenMonkey", "AI")
 
+cohort97 = Cohort(97)
+cohort97 = Cohort(98)
+cohort97 = Cohort(99)
 
+student1 = Student("Guy", "Cherkesky", "@cherkesky", 97)
+student1 = Student("Bill", "Gates", "@billyboy", 97)
+student1 = Student("Brian", "Chesky", "@bnb_brian", 98)
+student1 = Student("Steve", "Balmer", "@whoopie", 99)

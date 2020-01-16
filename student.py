@@ -8,3 +8,11 @@
 # The student's cohort
 # The collection of exercises that the student is currently working on
 
+
+class Student:
+  def __init__(self, first, last, slack, cohort):
+    self.first = first
+    self.last = last
+    self.slack = slack
+    self.cohort  = cohort
+    exercises = list()

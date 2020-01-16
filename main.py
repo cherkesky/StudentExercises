@@ -20,6 +20,9 @@ from cohort import Cohort
 from instructor import Instructor
 from exercise import Exercise
 
+students = list()
+exercises = list()
+
 ex1 = Exercise("ChickenMonkey", "JS")
 ex2 = Exercise("ChickenMonkey", "Python")
 ex3 = Exercise("ChickenMonkey", "Assembly")
@@ -71,3 +74,16 @@ inst2.assign_exercise_to_student(student4, ex3)
 inst2.assign_exercise_to_student(student4, ex4)
 inst3.assign_exercise_to_student(student4, ex5)
 inst3.assign_exercise_to_student(student4, ex6)
+
+
+## Challenge 
+
+students = [student1, student2, student3, student4]
+
+for student in students:
+  print("")
+  i = 0
+  print(f'{student.first} is working on:')
+  for exercise in student.exercises:
+    print(f'{student.exercises[i].name} in {student.exercises[i].language}')
+    i = i+1

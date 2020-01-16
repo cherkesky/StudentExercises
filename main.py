@@ -16,3 +16,8 @@
 # Have each instructor assign 2 exercises to each of the students.
 
 
+import student
+import cohort
+import instructor
+
+

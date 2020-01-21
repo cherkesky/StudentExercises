@@ -8,6 +8,7 @@
 # The instructor's specialty (e.g. dad jokes, excitement, dancing, etc.)
 
 # A method to assign an exercise to a student
+from nssperson import NSSPerson
 
 
 class Instructor:

@@ -9,10 +9,11 @@
 # The collection of exercises that the student is currently working on
 from nssperson import NSSPerson
 
-class Student:
+class Student(NSSPerson):
   def __init__(self, first, last, slack, cohort):
-    self.first = first
-    self.last = last
-    self.slack = slack
-    self.cohort  = cohort
+    super().__init__(first, last, slack)
+    # self.first = first
+    # self.last = last
+    # self.slack = slack
+    # self.cohort  = cohort
     self.exercises = list()

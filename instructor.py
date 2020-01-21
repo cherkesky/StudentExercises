@@ -11,11 +11,12 @@
 from nssperson import NSSPerson
 
 
-class Instructor:
+class Instructor(NSSPerson):
   def __init__ (self, first, last, slack, specialty):
-    self.first = first
-    self.last = last
-    self.slack = slack
+    super().__init__(first, last, slack)
+    # self.first = first
+    # self.last = last
+    # self.slack = slack
     self.specialty  = specialty
 
   def assign_exercise_to_student(self, student_obj, exercise_obj):

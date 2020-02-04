@@ -39,7 +39,31 @@ class StudentExerciseReports():
             #         f'{student.first_name} {student.last_name} is in {student.cohort}')
             for student in all_students:
               print(student)
+            ## List comprehension =>
+            # [print(s) for s in all_students]  
+
+########################## ALL COHORTS ##########################
+class CohortsReport:
+  def __init__(self):
+    self.db_path = "/Users/cherkesky/workspace/python/StudentExercises/studentexercises.db"
+
+  def all_cohorts(self):
+    with sqlite3.connect(self.db_path) as conn:
+      db_cursor = conn.cursor()
+      db_cursor.execute("""
+      
+      select * from Cohort
+
+       """)
+      all_cohorts = db_cursor.fetchall()
+      print(all_cohorts)
+
+########################## ALL EXERCISES ##########################
+
+
 
 reports = StudentExerciseReports()
 reports.all_students()
 
+cohorts = CohortsReport()
+cohorts.all_cohorts()

@@ -1,6 +1,7 @@
 import sqlite3
 from student import Student
 
+
 class StudentExerciseReports():
 
     """Methods for reports on the Student Exercises database"""
@@ -13,8 +14,8 @@ class StudentExerciseReports():
         """Retrieve all students with the cohort name"""
 
         with sqlite3.connect(self.db_path) as conn:
+            conn.row_factory = lambda cursor, row: Student (row[1], row[2], row[3], row[5])
             db_cursor = conn.cursor()
-
             db_cursor.execute("""
             select 
                 s.Id,
@@ -30,8 +31,13 @@ class StudentExerciseReports():
 
             all_students = db_cursor.fetchall() # list of tuples
             print (all_students)
+
+            # for student in all_students:
+            #   print(f'{student[1]} {student[2]} is in {student[5]}')
             for student in all_students:
-              print(f'{student[1]} {student[2]} is in {student[5]}')
+                print(
+                    f'{student.first_name} {student.last_name} is in {student.cohort}')
+
 
 reports = StudentExerciseReports()
 reports.all_students()

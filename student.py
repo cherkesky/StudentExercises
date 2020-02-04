@@ -7,13 +7,12 @@
 # Slack handle
 # The student's cohort
 # The collection of exercises that the student is currently working on
-from nssperson import NSSPerson
 
-class Student(NSSPerson):
+
+class Student:
   def __init__(self, first, last, slack, cohort):
-    super().__init__(first, last, slack)
-    # self.first = first
-    # self.last = last
-    # self.slack = slack
-    # self.cohort  = cohort
+    self.first = first
+    self.last = last
+    self.slack = slack
+    self.cohort  = cohort
     self.exercises = list()

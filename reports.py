@@ -34,10 +34,11 @@ class StudentExerciseReports():
 
             # for student in all_students:
             #   print(f'{student[1]} {student[2]} is in {student[5]}')
+            # for student in all_students:
+            #     print(
+            #         f'{student.first_name} {student.last_name} is in {student.cohort}')
             for student in all_students:
-                print(
-                    f'{student.first_name} {student.last_name} is in {student.cohort}')
-
+              print(student)
 
 reports = StudentExerciseReports()
 reports.all_students()
